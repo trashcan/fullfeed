@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8">
+	<title>fullfeed</title>
+	<meta name="description" content="rss feeds">
+	<meta name="author" content="fullfeed">
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/skeleton.css">
+	<link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/fullfeed.css">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="images/fullfeed.favicon.png">
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+</head>
+<body>
+    <div id="background">&nbsp;</div>
+	<div class="container">
+		<div class="sixteen columns">
+			<h1 class="remove-bottom center white" style="margin-top: 40px;">fullfeed</h1>
+			<h5 class="center white" style="margin-bottom: 20px;">expand your feeds</h5>
+		</div>
+		<div class="two columns">&nbsp;</div>
+		<div class="twelve columns">
+            <div class="row remove-bottom" style="padding-bottom: 40px;">
+                <input class="eight columns alpha height18" type="text" id="rssUrl" value="" title="Paste RSS address here (please)"/>
+                <button class="four columns omega height32" type="button" id="expand"><img src="images/expand.png" />Expand</button>
+            </div>
+
+            <div id="history">
+            </div>
+            
+            <ul class="tabs">
+                <li><a class="active" href="#what">What is this?</a></li>
+                <li><a href="#example">Example</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+
+            <ul class="tabs-content">
+                <li id="news">
+                    <news>
+                        <h4>New site launched!</h4>
+                        <p>Feel free to contact me with any feedback.</p>
+                    </news>
+                </li>
+                <li id="example">
+                    <p>This is a feed from the San Francisco Chronicle, before and after going through this site.</p>
+                    <p><img src='/images/before.png'></p>
+                    <p><img src='/images/after.png'></p>
+                </li>
+                <li class="active" id="what">
+                    <info>
+                        <h4>Full what?</h4>
+                        <p>This site rehosts RSS feeds, and puts the entire content of the article in the feed.</p>
+                        <p>Put the RSS feed URL in the input box and click Expand. Copy and paste the link into your RSS reader, and enjoy the entire article in your feed reader.</p>
+                                            </info>
+                </li>
+               <li id="feedback">
+                    <feedback>
+                        <h4>Send some feedback</h4>
+                        <p>Is your favorite feed not working correctly? Have a problem with the site? Make sure to include your email address if you want a response.</p>
+                        <div class="row">
+                            <textarea class="twelve columns alpha omega" id="feedbackText"></textarea>
+                            <p id="feedbackThankyou" style="display:none">Thank you for your feedback!</p>
+                            <button class="three columns alpha height32" type="submit" id="feedbackButton">Send feedback</button>
+                            <button class="three columns alpha height32" type="button" id="feedbackMoar" style="display:none">More feedback?</button>
+                        </div>
+                    </feedback>
+                </li>
+        </li>
+            </ul>
+            <hr />
+            <footer class="center">
+                <a href='mailto:fullfeed@brokenwatch.net'>Pat Lathem</a>
+            </footer>
+		</div>
+		<div class="two columns">&nbsp;</div>
+	</div><!-- container -->
+	<!-- JS
+	================================================== -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="js/jquery.zclip.min.js"></script>
+    <script src="js/jquery.hint.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script src="js/jquery.json-2.2.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/fullfeed.js"></script>
+    <script src="js/ga.js"></script>
+
+<!-- End Document
+================================================== -->
+</body>
+</html>
